@@ -130,6 +130,7 @@ export class MCPProxy {
     }
 
     try {
+      console.debug({headersJson});
       const headers = JSON.parse(headersJson)
       if (typeof headers !== 'object' || headers === null) {
         console.warn('OPENAPI_MCP_HEADERS environment variable must be a JSON object, got:', typeof headers)
